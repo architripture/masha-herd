@@ -1,0 +1,133 @@
+/* Shared light direction, based on Masha's approved personal hub. */
+:root{--paper:#fffefa;--white:#fff;--cream:#fffaf1;--mist:#e5f2fb;--navy:#263735;--navy2:#20312f;--ink:#303b39;--text:#303b39;--muted:#596660;--brick:#b54124;--brick2:#92341d;--red:#b54124;--accent:#b54124;--coral:#ff9978;--peach:#ffe5d8;--blue:#e5f2fb;--yellow:#fff3bb;--mint:#eaf3d9;--wash:#eaf3d9;--line:#d6ded7}
+body{background:var(--paper);color:var(--text)}
+.light-home img,.light-personal img,.light-course img,.light-guide img,.light-mother img,.light-book .author__photo img,.light-book .photo-story img{filter:none}
+.light-home h1,.light-personal h1,.light-course h1,.light-guide h1,.light-mother h1{color:var(--navy)}
+.ecosystem-nav{display:flex;align-items:center;gap:12px;flex-wrap:wrap;min-height:44px;font:13px/1.4 Arial,sans-serif;color:var(--muted);margin:0 auto 8px}
+.ecosystem-nav a{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;color:var(--navy);gap:9px}
+.ecosystem-nav a:hover{text-decoration:underline}
+.ecosystem-nav a:before{content:'←';font-size:20px}
+.light-book>.ecosystem-nav{width:min(1160px,calc(100% - 42px));padding-top:4px}
+.light-book .nav{position:relative;padding:12px 0}
+.light-book .hero{padding-top:36px;min-height:0;background:var(--yellow)}
+.light-book .hero__grid{grid-template-columns:minmax(0,1.1fr) minmax(0,.7fr);gap:50px}
+.light-book .hero__voice{background:#fffaf1;border:0;border-radius:18px;padding:18px 22px}
+.light-book .hero__lead{font-size:20px}
+.light-book .book-stage{min-height:540px}
+.light-book .section{padding:76px 0}
+.light-book .cream{background:var(--cream)}
+.light-book .mist{background:var(--blue)}
+.light-book .emotion-cloud,.light-book .offer,.light-book .journey-map{border-radius:26px;box-shadow:none}
+.light-book .emotion-cloud{background:var(--mint)}
+.light-book .emotion{background:#fffefa;border-color:#c4d4b4}
+.light-book .emotion--x{background:#fff3bb;color:var(--navy);border-color:#d8cd90}
+.light-book .author{align-items:start;gap:60px}
+.light-book .author__photo{padding:0;box-shadow:none;transform:none;background:transparent}
+.light-book .author__photo:before{display:none}
+.light-book .author__photo img{border-radius:95px 28px 45px 28px;height:540px}
+.light-book .author__photo:after{background:var(--yellow);border-radius:16px;right:-8px;bottom:-22px;font-size:52px;padding:8px 24px}
+.light-book .author__lead{font-size:24px}
+.light-book .author__quote{border:0;background:var(--peach);border-radius:20px;padding:22px;font-size:24px}
+.light-book .offer{background:var(--peach)}
+.light-book .offer__price{color:var(--navy)}
+.light-book .btn--brick,.light-personal .btn:not(.ghost),.light-mother .btn:not(.secondary),.light-course .primary,.light-guide .primary{background:var(--coral);border-color:var(--coral);color:var(--navy);font-weight:700}
+.light-book .btn--brick:hover,.light-personal .btn:not(.ghost):hover,.light-mother .btn:not(.secondary):hover,.light-course .primary:hover,.light-guide .primary:hover{background:#ffb397;border-color:#ffb397;color:var(--navy)}
+.light-personal .hero{gap:50px;padding:38px 0 64px;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)}
+.light-personal .hero h1{font-size:clamp(48px,5.1vw,72px)}
+.light-personal .hero .eyebrow{display:inline-block;background:var(--mint);border-radius:16px;padding:10px 16px}
+.light-personal .hero figure{padding:15px 15px 0;background:var(--peach);border-radius:100px 28px 45px 28px}
+.light-personal .hero .portrait{width:100%;height:470px;max-height:none;object-fit:cover;object-position:50% 30%;border-radius:86px 20px 34px 20px;filter:none}
+.light-personal .hero figcaption{position:relative;display:inline-block;margin:0 8px -18px;padding:13px 24px;background:var(--yellow);border-radius:18px;transform:rotate(-3deg)}
+.light-personal .section{border:0;padding:56px 0}
+.light-personal .recognition{gap:20px}
+.light-personal .recognition article{border:0;padding:28px;border-radius:24px;background:var(--blue)}
+.light-personal .recognition article:nth-child(2){background:var(--mint)}
+.light-personal .recognition article:nth-child(3){background:var(--yellow)}
+.light-personal .recognition article:nth-child(4){background:var(--peach)}
+.light-personal .wide-note,.light-personal .message-example{background:var(--yellow);border-radius:22px}
+.light-personal .about{background:#fff;align-items:start}
+.light-personal .case{background:#fffaf1;padding:32px;border:0;border-radius:26px;margin-bottom:20px}
+.light-personal .case:nth-of-type(even){background:var(--blue)}
+.light-personal .format{background:var(--peach);border:0;border-radius:28px}
+.light-personal .format+.format{background:var(--blue)}
+.light-personal .process article{padding:25px;background:var(--mint);border-radius:24px}
+.light-personal .final{border:0}
+.light-course .masthead{border:0}
+.light-course .sales-main>.ecosystem-nav{margin-top:0}
+.light-course .sales-hero{gap:28px 55px;padding:36px 40px 42px;border-radius:32px;background:var(--peach);grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr)}
+.light-course .sales-hero h1{font-size:clamp(46px,5.4vw,74px);line-height:1.07}
+.light-course .sales-hero .eyebrow{display:inline-block;background:#fffaf1;padding:9px 14px;border-radius:14px}
+.light-course .sales-hero .handwriting{color:var(--navy)}
+.light-course .hero-result{background:#fffefa;border:0;border-radius:24px;padding:24px}
+.light-course .course-promise{padding:0 0 0 2px}
+.light-course .results-section{border:0;padding:65px 0}
+.light-course .takeaway{background:var(--mint);border-radius:20px}
+.light-course .sample-paper{border-radius:24px;background:var(--blue);box-shadow:none;border:0}
+.light-course .payment-buttons .pay-button{display:flex;flex-direction:row;justify-content:space-between;align-items:center;gap:12px}
+.light-course .payment-buttons .pay-button strong{flex:0 0 auto}
+.light-course .micro,.light-course .fee-note,.light-course .purchase-boundary,.light-mother footer .small{font-size:13px;color:var(--muted)}
+.light-course .author-section img{object-position:50% 30%}
+.light-course .positioning-note{border:0;background:var(--mint);border-radius:24px;padding:26px}
+.light-course .course-safety{background:var(--yellow);border:0;border-radius:22px;padding:24px}
+.light-course .author-section{background:var(--mint);border:0;border-radius:28px;padding:36px;grid-template-columns:280px minmax(0,1fr)}
+.light-course .author-section img{border-radius:75px 24px 34px 24px;height:365px;filter:none;background:#fffefa}
+.light-course .purchase{background:var(--peach);box-shadow:none;border:0;border-radius:28px}
+.light-course .pay-button,.light-guide .pay-button{background:var(--coral);color:var(--navy);border-radius:28px;font-weight:700}
+.light-course .pay-button:hover,.light-guide .pay-button:hover{background:#ffb397}
+.light-course .free-guide{background:var(--blue);border:0;border-radius:24px;padding:27px}
+.light-mother .hero{padding-top:30px;gap:42px;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)}
+.light-mother .hero>div{min-width:0}
+.light-mother .hero h1{font-size:clamp(56px,6.1vw,88px)}
+.light-mother .hero .eyebrow{display:inline-block;background:var(--mint);border-radius:16px;padding:10px 15px}
+.light-mother .cover{background:var(--peach);border-radius:28px;transform:rotate(1deg);padding:18px;box-shadow:none}
+.light-mother .cover img{border-radius:16px}
+.light-mother .section{border:0;padding:60px 0}
+.light-mother .recognition{background:var(--mint);border-radius:28px;padding:36px;gap:44px}
+.light-mother .situations p{border-color:#c9d4b6}
+.light-mother .sample{background:var(--blue);padding:36px;border-radius:28px;gap:44px}
+.light-mother .paper{border-radius:15px;transform:rotate(-1deg)}
+.light-mother .tab{background:#fffefa;border-color:#c4d5d9}
+.light-mother .tab.active{background:var(--navy);color:white}
+.light-mother .story{align-items:start;gap:55px}
+.light-mother .stages summary{padding-right:12px}
+.light-book .hero__lead{text-wrap:pretty}
+.light-book .hero .eyebrow{text-wrap:balance}
+.light-mother .story figure{margin:0;max-width:100%}
+.light-mother .story img{border-radius:60px 22px 35px 22px;filter:none}
+.light-mother .offer{background:var(--peach);border-radius:30px}
+.light-mother .quote{border:0;background:var(--yellow);padding:27px;border-radius:24px;margin:0}
+.light-mother .quote+.quote{background:var(--blue)}
+.light-mother dialog{border:0;border-radius:24px}
+.light-guide .welcome{background:var(--blue);padding:32px;border-radius:28px;margin:24px 0}
+.light-guide .welcome h1{font-size:clamp(43px,6vw,67px);line-height:1.07}
+.light-guide .welcome .eyebrow{background:var(--mint);display:inline-block;padding:9px 14px;border-radius:14px}
+.light-guide .author{align-items:center;border-color:#c2d7df}
+.light-guide .author img{filter:none;width:120px;height:150px;flex:0 0 120px;background:#fffefa;border-radius:34px 15px 24px 15px}
+.light-guide .choice{border-radius:18px;background:#fff;border-color:#c5d2cb;padding:20px}
+.light-guide .choice:has(input:checked){background:var(--mint);border-color:#5c7458}
+.light-guide .progress{height:6px;border-radius:6px;overflow:hidden}
+.light-guide .feedback,.light-guide .phrase{background:var(--yellow);border-radius:22px}
+.light-guide .result>.lead{background:var(--blue);padding:24px;border-radius:22px}
+.light-guide .offer-option{background:var(--peach);padding:25px;border-radius:24px}
+.light-guide .offer-option+.offer-option{background:var(--mint)}
+.light-guide .review-dialog{border-radius:24px}
+.bio-life{margin:20px 0;font-size:16px;line-height:1.7}
+.bio-life p+p{margin-top:14px}
+.education-note{margin:25px 0 0;padding:20px 22px;background:var(--mint);border-radius:22px;border:0!important;min-width:0}
+.education-note summary{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:44px;padding:0;cursor:pointer;font:600 16px/1.4 Arial,sans-serif;color:var(--navy);list-style:none}
+.education-note summary:after{content:'+';font-size:25px;font-weight:400}
+.education-note[open] summary:after{content:'−'}
+.education-note summary::-webkit-details-marker{display:none}
+.education-note .education-list{padding:0;margin:18px 0 0;list-style:none;display:block}
+.education-note .education-list li{padding:15px 0;border-top:1px solid #c4d2b5;font:14px/1.65 Arial,sans-serif;color:var(--text)}
+.education-list strong{display:block;font-weight:700;color:var(--navy);font-size:15px;overflow-wrap:anywhere}
+.education-list p{font:14px/1.65 Arial,sans-serif!important;margin:6px 0 0!important}
+.education-list a{color:var(--accent);text-underline-offset:3px;overflow-wrap:anywhere}
+.light-home .about-grid{align-items:start}
+.light-home .education-note{background:var(--mint)}
+.light-course .education-note{background:#fffefa}
+.light-book .education-note{background:#fffefa}
+.light-mother .education-note{background:var(--mint)}
+@media(max-width:950px){.light-book .hero__grid{grid-template-columns:1fr}.light-book .book-stage{min-height:0;padding:24px 0}.light-book .book-stage img{max-width:300px;height:auto}.light-book .author{grid-template-columns:1fr}.light-book .author__photo{max-width:440px;margin:0 auto 18px}.light-book .author__photo img{height:480px}.light-course .sales-hero{grid-template-columns:1fr}.light-course .author-section{grid-template-columns:220px minmax(0,1fr);gap:25px}.light-course .author-section img{width:220px;height:295px}.light-personal .hero{gap:28px}.light-personal .hero h1{font-size:clamp(44px,5.6vw,55px)}.light-personal .hero .portrait{height:390px}.light-mother .hero h1{font-size:58px}}
+@media(max-width:600px){.ecosystem-nav{font-size:12px;margin-bottom:0}.light-book .nav__in{flex-wrap:wrap;gap:6px 20px}.light-book .nav__links{margin-left:0;flex-wrap:wrap;gap:15px}.light-book .hero{padding-top:28px}.light-book .hero__grid{gap:15px}.light-book .hero h1{font-size:clamp(51px,12.5vw,73px)}.light-book .hero__lead{font-size:18px}.light-book .hero__voice{font-size:19px}.light-book .section{padding:48px 0}.light-book .author{gap:30px}.light-book .author__photo img{height:390px}.light-book .author__lead{font-size:22px}.light-book .author__copy>p{font-size:16px}.light-book .emotion-cloud{padding:22px}.light-personal .hero{grid-template-columns:1fr;gap:35px;padding-top:22px}.light-personal .hero h1{font-size:clamp(44px,12.2vw,67px)}.light-personal .hero figure{display:block;max-width:380px;width:100%;justify-self:center;padding:12px 12px 0}.light-personal .hero .portrait{width:100%;height:330px}.light-personal .hero figcaption{max-width:100%;font-size:32px;margin:0 4px -12px}.light-personal .recognition{gap:16px}.light-personal .recognition article{padding:24px}.light-personal .section{padding:37px 0}.light-personal .case{padding:24px 20px}.light-personal .process article{padding:23px}.light-personal .process article:before{position:static}.light-course .sales-hero{padding:27px 22px 30px;gap:25px;border-radius:25px}.light-course .sales-hero h1{font-size:clamp(42px,11.4vw,62px)}.light-course .results-section{padding:40px 0}.light-course .results-section:has(.course-results){padding:26px 22px}.light-course .hero-result{padding:23px}.light-course .course-promise{padding:0}.light-course .author-section{grid-template-columns:1fr;padding:26px 22px;gap:25px}.light-course .author-section img{width:170px;height:220px}.light-course .purchase{padding:26px 22px}.light-course .free-guide{padding:23px}.light-course .sales-hero .handwriting{font-size:30px}.light-mother .hero{grid-template-columns:1fr;gap:28px}.light-mother .hero h1{font-size:clamp(54px,14.5vw,77px)}.light-mother .hero .cover{margin:0;max-width:100%}.light-mother .section{padding:42px 0}.light-mother .recognition,.light-mother .sample{padding:27px 22px;gap:28px}.light-mother .story{gap:28px}.light-mother .story figure{max-width:340px}.light-mother .offer{padding:26px 22px;gap:28px}.light-mother .quotes{gap:18px}.light-mother .quote{padding:24px}.light-guide .welcome{padding:26px 20px;margin-top:18px}.light-guide .welcome h1{font-size:clamp(34px,10.5vw,55px)}.light-guide .author{align-items:start;gap:15px}.light-guide .author img{width:80px;height:108px;flex-basis:80px}.light-guide .author .hand{font-size:26px}.light-guide .choice{padding:17px 14px}.light-guide .offer-option{padding:23px 20px}.education-note{padding:16px 19px}.education-note summary{font-size:15px}.bio-life{font-size:15px}}
+@media print{.ecosystem-nav{display:none}.light-guide .welcome,.light-guide .phrase{background:white}.education-note{break-inside:avoid}}
