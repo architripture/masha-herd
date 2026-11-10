@@ -37,7 +37,18 @@
  }
  function render() {
    const items = data.filter(i => (categoryFilter==="all" || i.category===categoryFilter) && (statusFilter==="all" || i.status===statusFilter));
-   root.innerHTML = items.length ? items.map(card).join("") : '<p class="no-results">В этой категории пока ничего нет. Можно посмотреть другие находки.</p>';
+   const names = {family:"Для ребёнка",joy:"Для себя и удовольствия",health:"Для здоровья и силы",work:"Для работы и творчества",dreams:"Мои мечталки"};
+   const descriptions = {family:"Вещи для движения, воображения и совместных открытий.",joy:"Красивые ритуалы, знания и маленькие удовольствия.",health:"Не ради идеальности, а чтобы чувствовать себя сильнее.",work:"Сервисы, которые помогают создавать и не теряться в задачах.",dreams:"То, что пока на горизонте — и это тоже часть жизни."};
+   const groupedCards = [];
+   let last = null;
+   for(const item of items){
+      if(categoryFilter==="all" && item.category!==last){
+        groupedCards.push('<div class="category-heading"><div><span class="category-kicker">МОИ НАХОДКИ</span><h3>'+escape(names[item.category] || item.category)+'</h3><p>'+escape(descriptions[item.category] || "")+'</p></div><span aria-hidden="true">✳</span></div>');
+        last=item.category;
+      }
+      groupedCards.push(card(item));
+   }
+   root.innerHTML = groupedCards.length ? groupedCards.join("") : '<p class="no-results">В этой категории пока ничего нет. Можно посмотреть другие находки.</p>';
    root.querySelectorAll("img.real-photo").forEach(img => img.addEventListener("error", () => {
      img.outerHTML = '<div class="image-fallback">Фото временно недоступно</div>';
    }, {once:true}));
