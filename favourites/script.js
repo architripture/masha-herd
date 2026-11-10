@@ -18,20 +18,46 @@
  };
  const escape = s => String(s || "").replace(/[&<>"']/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
  const valid = s => { try { const u = new URL(s); return ["http:","https:"].includes(u.protocol) ? u.href : "#"; } catch { return "#"; } };
+ const statusNames = {mine:"Пользуюсь / люблю",curious:"Присматриваюсь",trying:"Хочу попробовать",wish:"Мечтаю"};
+ const artFallback = item => '<svg viewBox="0 0 320 280" role="img" aria-label="Иллюстрация" xmlns="http://www.w3.org/2000/svg">'+(arts[item.art]||arts.folios)+'</svg>';
+ let categoryFilter = "all";
+ let statusFilter = "all";
  function card(item) {
-  const affiliate = Boolean(item.affiliateUrl);
-  const url = valid(item.affiliateUrl || item.referralUrl || item.url);
-  const image = item.imageUrl ? '<img loading="lazy" alt="'+escape(item.title)+'" src="'+escape(valid(item.imageUrl))+'">' : '<svg viewBox="0 0 320 280" role="img" aria-label="Декоративная иллюстрация" xmlns="http://www.w3.org/2000/svg">'+(arts[item.art]||arts.diary)+'</svg>';
-  const tag = affiliate ? "ПАРТНЁРСКАЯ ССЫЛКА" : item.referral ? "ПРОМОКОД ДЛЯ ДРУЗЕЙ" : item.wishlist ? "В СПИСКЕ ЖЕЛАНИЙ" : "МОЯ ПОДБОРКА";
-  const promo = item.promoCode ? '<div class="promo-row"><code>'+escape(item.promoCode)+'</code><button type="button" data-copy="'+escape(item.promoCode)+'">Скопировать</button></div>' : '';
-  return '<article class="product" data-category="'+escape(item.category)+'"><div class="product-cover '+escape(item.accent)+'"><span class="cover-stamp">'+tag+'</span>'+image+'</div><div class="product-body"><div class="product-eyebrow">'+escape(item.eyebrow)+'</div><h3>'+escape(item.title)+'</h3><p class="product-desc">'+escape(item.description)+'</p>'+promo+'<a class="product-link" target="_blank" rel="noopener noreferrer sponsored" href="'+escape(url)+'">'+escape(item.label || "Посмотреть")+' <span aria-hidden="true">↗</span></a></div></article>';
+   const linked = Boolean(item.referralUrl || item.affiliateUrl || item.promoCode);
+   const url = valid(item.affiliateUrl || item.referralUrl || item.url);
+   const fallback = artFallback(item);
+   const img = item.imageUrl ? '<img class="real-photo" loading="lazy" decoding="async" alt="Фото: '+escape(item.title)+'" src="'+escape(valid(item.imageUrl))+'">' : fallback;
+   const credit = item.imageUrl ? '<span class="image-credit">Фото: '+escape(item.imageSource || "сайт бренда")+'</span>' : "";
+   const badge = linked ? '<span class="cover-stamp cover-stamp--benefit">Есть бонус</span>' : '<span class="cover-stamp">'+(item.status === "wish" ? "Мечта" : "Моя находка")+'</span>';
+   const promo = item.promoCode ? '<div class="promo-row"><span><small>Промокод</small><code>'+escape(item.promoCode)+'</code></span><button type="button" data-copy="'+escape(item.promoCode)+'" aria-label="Скопировать промокод '+escape(item.promoCode)+'">Скопировать</button></div>' : "";
+   const benefit = item.benefit ? '<p class="product-benefit"><span aria-hidden="true">✦</span> '+escape(item.benefit)+'</p>' : "";
+   const referralNote = linked ? '<span class="referral-line">По этой ссылке или коду я могу получить бонус / комиссию</span>' : "";
+   const photoClass = item.imageUrl ? " has-photo" : "";
+   return '<article class="product" data-category="'+escape(item.category)+'" data-status="'+escape(item.status)+'"><div class="product-cover'+photoClass+'">'+badge+img+credit+'</div><div class="product-body"><div class="status-row"><span class="status-pill status-'+escape(item.status)+'">'+escape(statusNames[item.status] || "Находка")+'</span></div><div class="product-eyebrow">'+escape(item.eyebrow)+'</div><h3>'+escape(item.title)+'</h3><p class="product-desc">'+escape(item.description)+'</p>'+benefit+promo+'<a class="product-link" target="_blank" rel="noopener noreferrer'+(linked ? " sponsored" : "")+'" href="'+escape(url)+'">'+escape(item.label || "Перейти на сайт")+' <span aria-hidden="true">↗</span></a>'+referralNote+'</div></article>';
  }
- function render(filter) { root.innerHTML = data.filter(i=>filter==="all"||i.category===filter).map(card).join(""); }
- document.querySelectorAll(".filter").forEach(btn=>btn.addEventListener("click",()=>{
-  document.querySelectorAll(".filter").forEach(b=>{b.classList.toggle("active",b===btn);b.setAttribute("aria-pressed",String(b===btn));});
-  render(btn.dataset.filter);
+ function render() {
+   const items = data.filter(i => (categoryFilter==="all" || i.category===categoryFilter) && (statusFilter==="all" || i.status===statusFilter));
+   root.innerHTML = items.length ? items.map(card).join("") : '<p class="no-results">В этой категории пока ничего нет. Можно посмотреть другие находки.</p>';
+   root.querySelectorAll("img.real-photo").forEach(img => img.addEventListener("error", () => {
+     img.outerHTML = '<div class="image-fallback">Фото временно недоступно</div>';
+   }, {once:true}));
+   const shown = document.getElementById("shown-count"); if(shown) shown.textContent = items.length;
+ }
+ document.querySelectorAll(".filter[data-filter]").forEach(btn=>btn.addEventListener("click",()=>{
+   categoryFilter = btn.dataset.filter;
+   document.querySelectorAll(".filter[data-filter]").forEach(b=>{b.classList.toggle("active",b===btn);b.setAttribute("aria-pressed",String(b===btn));});
+   render();
  }));
- root.addEventListener("click", async e=>{const btn=e.target.closest("[data-copy]");if(!btn)return;try{await navigator.clipboard.writeText(btn.dataset.copy);btn.textContent="Скопировано ✓";setTimeout(()=>btn.textContent="Скопировать",2000);}catch{window.prompt("Скопируй промокод",btn.dataset.copy);}});
- document.getElementById("book-link").href = valid(window.MASHA_BOOK_URL || "https://architripture.github.io/architect-emotions-book/");
- render("all");
+ document.querySelectorAll(".status-filter").forEach(btn=>btn.addEventListener("click",()=>{
+   statusFilter = btn.dataset.status;
+   document.querySelectorAll(".status-filter").forEach(b=>{b.classList.toggle("active",b===btn);b.setAttribute("aria-pressed",String(b===btn));});
+   render();
+ }));
+ root.addEventListener("click", async e=>{
+   const btn = e.target.closest("[data-copy]");if(!btn)return;
+   try {await navigator.clipboard.writeText(btn.dataset.copy);btn.textContent="Скопировано ✓";setTimeout(()=>btn.textContent="Скопировать",2400);}
+   catch {window.prompt("Скопируй промокод",btn.dataset.copy);}
+ });
+ const bookLink = document.getElementById("book-link"); if(bookLink) bookLink.href=valid(window.MASHA_BOOK_URL || "https://architripture.github.io/architect-emotions-book/");
+ render();
 })();
