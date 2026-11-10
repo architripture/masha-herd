@@ -62,14 +62,21 @@ window.MASHA_PICKS = [
   {
     id: "fireflies", category: "create", art: "waves", accent: "sand",
     title: "Fireflies.ai", eyebrow: "Записи и заметки",
-    description: "Когда нужно сохранить разговор, вернуться к важным мыслям и не держать всё в голове.",
-    url: "https://fireflies.ai/", affiliateUrl: "", imageUrl: "", label: "Открыть Fireflies"
+    description: "Расшифровка встреч и сохранение важных мыслей. Моя ссылка даёт новым подходящим пользователям 10% скидки на тариф при подключении в первые 3 дня; мне — $5 кредитами на Fireflies за успешную активацию. По условиям программы для бонуса нужны рабочие email-домены.",
+    url: "https://fireflies.ai/", referralUrl: "https://app.fireflies.ai/login?referralCode=v6PURmw0Gc", affiliateUrl: "", imageUrl: "", label: "Попробовать со скидкой", referral: true
   },
   {
     id: "chatplace", category: "create", art: "chat", accent: "peach",
     title: "ChatPlace", eyebrow: "Автоматизация без суеты",
-    description: "Один из моих инструментов для общения с аудиторией и автоматизации ответов в соцсетях.",
-    url: "https://chatplace.io/", affiliateUrl: "", imageUrl: "", label: "Открыть ChatPlace"
+    description: "Мой инструмент для автоматизации ответов в соцсетях. По ссылке или коду — 10-дневный пробный доступ к Pro/Creator. Я могу получать комиссию от оплат привлечённых пользователей, пока моя подписка активна.",
+    url: "https://chatplace.io/", affiliateUrl: "https://chatplace.io/?r=3b1e9f02-4cb1-4a3f-ba77-4c31e8f4aee0", imageUrl: "", label: "Попробовать ChatPlace",
+    promoCode: "LAJONAXO47", referral: true
+  },
+  {
+    id: "notion", category: "create", art: "folios", accent: "sand",
+    title: "Notion", eyebrow: "Организация и творчество",
+    description: "Пространство, где можно собирать идеи, проекты и заметки. Сейчас Notion не принимает новых участников в affiliate-программу, поэтому ссылка обычная.",
+    url: "https://www.notion.com/", affiliateUrl: "", imageUrl: "", label: "Посмотреть Notion"
   },
   {
     id: "taplink", category: "create", art: "links", accent: "mint",
