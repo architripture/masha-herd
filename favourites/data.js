@@ -1,5 +1,6 @@
 // Редактируй этот список, когда появятся личные партнёрские ссылки.
-// URL в поле affiliateUrl можно добавить ТОЛЬКО после одобрения программы.
+// affiliateUrl — денежная партнёрская программа после одобрения; referralUrl — персональная ссылка по программе «пригласи друга».
+// Нельзя публиковать личный referral Yoto на публичных сайтах/соцсетях. Его здесь нет.
 // imageUrl: можно вставить собственное фото или изображение с разрешением на использование.
 window.MASHA_PICKS = [
   {
@@ -17,14 +18,14 @@ window.MASHA_PICKS = [
   {
     id: "radix", category: "strength", art: "radix", accent: "butter",
     title: "Radix Nutrition", eyebrow: "Удобное питание",
-    description: "Завтраки и протеин из моего повседневного рациона. Находка для дней, когда хочется хорошо поесть без лишней суеты.",
-    url: "https://radixnutrition.com/", affiliateUrl: "", imageUrl: "", label: "Посмотреть продукты"
+    description: "Завтраки и протеин из моего повседневного рациона. По моей ссылке другу — NZ$20 скидки при заказе свыше NZ$60; мне — 1 500 бонусных баллов (эквивалент NZ$15 на покупки).",
+    url: "https://radixnutrition.com/", referralUrl: "https://i.refs.cc/6cYXtrb3", affiliateUrl: "", imageUrl: "", label: "Перейти со скидкой", referral: true
   },
   {
     id: "broth", category: "strength", art: "broth", accent: "peach",
     title: "Nutra Naturals · Beef Bone Broth", eyebrow: "На моей кухне",
-    description: "Костный бульон — один из удобных продуктов, которые хочется держать под рукой. Бренд также встречается под прежним названием Nutra Organics.",
-    url: "https://nutraorganics.com.au/products/beef-bone-broth-concentrate-natural", affiliateUrl: "", imageUrl: "", label: "Посмотреть бульон"
+    description: "Костный бульон — один из продуктов, которые удобно иметь под рукой. По моей ссылке другу — A$20 скидки на первый заказ свыше A$120; мне — A$20 бонусами программы.",
+    url: "https://nutraorganics.com.au/", referralUrl: "https://rwrd.io/ref_WMPWNMH?c", affiliateUrl: "", imageUrl: "", label: "Перейти со скидкой", referral: true
   },
   {
     id: "weighted-vest", category: "strength", art: "vest", accent: "sand",
@@ -35,8 +36,15 @@ window.MASHA_PICKS = [
   {
     id: "yoto", category: "family", art: "yoto", accent: "butter",
     title: "Yoto", eyebrow: "Для ребёнка и наших семейных дней",
-    description: "Аудиоистории и музыка для детей. Нравится сама идея слушать и воображать, а не только смотреть в экран.",
+    description: "Аудиоистории и музыка для детей: слушать и воображать, а не только смотреть в экран. Личную ссылку «пригласи друга» не публикую здесь из-за правил программы Yoto.",
     url: "https://au.yotoplay.com/", affiliateUrl: "", imageUrl: "", label: "Узнать о Yoto"
+  },
+  {
+    id: "womens-sreda", category: "strength", art: "diary", accent: "mint",
+    title: "Женская среда · Анна Левадная", eyebrow: "Женское здоровье и знания",
+    description: "Годовой лекторий о женском здоровье с экспертами. Я работаю здесь коучем и веду поддерживающую рубрику. По моему коду подруге — 20% скидки на подписку; мне — 1 000 ₽ бонусами на счёт.",
+    url: "https://event.annamama.ru/womenhealth", referralUrl: "", affiliateUrl: "", imageUrl: "", label: "Посмотреть лекторий",
+    promoCode: "sreda295C31D8", referral: true
   },
   {
     id: "edpower", category: "family", art: "blocks", accent: "mint",
