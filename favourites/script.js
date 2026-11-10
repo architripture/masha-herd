@@ -20,7 +20,7 @@
  const valid = s => { try { const u = new URL(s); return ["http:","https:"].includes(u.protocol) ? u.href : "#"; } catch { return "#"; } };
  function card(item) {
   const affiliate = Boolean(item.affiliateUrl);
-  const url = valid(item.affiliateUrl || item.url);
+  const url = valid(item.affiliateUrl || item.referralUrl || item.url);
   const image = item.imageUrl ? '<img loading="lazy" alt="'+escape(item.title)+'" src="'+escape(valid(item.imageUrl))+'">' : '<svg viewBox="0 0 320 280" role="img" aria-label="Декоративная иллюстрация" xmlns="http://www.w3.org/2000/svg">'+(arts[item.art]||arts.diary)+'</svg>';
   const tag = affiliate ? "ПАРТНЁРСКАЯ ССЫЛКА" : item.referral ? "ПРОМОКОД ДЛЯ ДРУЗЕЙ" : item.wishlist ? "В СПИСКЕ ЖЕЛАНИЙ" : "МОЯ ПОДБОРКА";
   const promo = item.promoCode ? '<div class="promo-row"><code>'+escape(item.promoCode)+'</code><button type="button" data-copy="'+escape(item.promoCode)+'">Скопировать</button></div>' : '';
