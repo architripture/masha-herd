@@ -1,100 +1,295 @@
-// Редактируй этот список, когда появятся личные партнёрские ссылки.
-// affiliateUrl — денежная партнёрская программа после одобрения; referralUrl — персональная ссылка по программе «пригласи друга».
-// Нельзя публиковать личный referral Yoto на публичных сайтах/соцсетях. Его здесь нет.
-// imageUrl: можно вставить собственное фото или изображение с разрешением на использование.
+// Единый редактируемый каталог «Машины находки».
+// status: mine (пользуюсь), curious (интересно), trying (пробую), wish (мечта).
+// referralUrl — персональная ссылка «пригласи друга»; affiliateUrl — партнёрская ссылка.
+// Личный реферальный Yoto URL нельзя размещать публично по условиям Yoto, поэтому используется обычная ссылка.
 window.MASHA_PICKS = [
   {
-    id: "resilience", category: "reflection", art: "diary", accent: "mint",
-    title: "Resilience Agenda", eyebrow: "Планирование и внутренние опоры",
-    description: "Блокноты и планеры о том, как находить место не только для дел, но и для собственного благополучия.",
-    url: "https://www.resilienceagenda.com/", affiliateUrl: "", imageUrl: "", label: "Посмотреть блокноты"
+    "id": "yoto",
+    "category": "family",
+    "status": "mine",
+    "title": "Yoto",
+    "eyebrow": "Истории вместо бесконечных экранов",
+    "description": "У Луни есть Yoto. Мне близка идея, что ребёнок может сам выбирать, что слушать: музыку, сказки, истории. Здесь ссылка на магазин без реферального кода — публично публиковать мой личный Yoto-код нельзя.",
+    "url": "https://au.yotoplay.com/",
+    "imageUrl": "https://store.moma.org/cdn/shop/files/161098_c_2cfdff64-51bf-4ca5-b2ab-af2c09e84a79.jpg?v=1750948134",
+    "imageSource": "MoMA Design Store",
+    "label": "Смотреть Yoto"
   },
   {
-    id: "friend", category: "reflection", art: "folios", accent: "lavender",
-    title: "Creator’s Friend", eyebrow: "Блокноты для разных сторон жизни",
-    description: "Мне нравится сама идея: отдельное пространство для творчества, интересов и мыслей, а не только бесконечных списков задач.",
-    url: "https://www.creatorsfriend.com.au/", affiliateUrl: "", imageUrl: "", label: "В магазин"
+    "id": "little-scooter",
+    "category": "family",
+    "status": "mine",
+    "title": "Little Nation · самокат",
+    "eyebrow": "Наш маленький транспорт",
+    "description": "У дочки есть самокат Little Nation. Мне нравится, сколько новых маршрутов и самостоятельных решений появляется на прогулке, когда ребёнок осваивает движение.",
+    "url": "https://littlenation.co.nz/collections/ride",
+    "imageUrl": "https://littlenation.com.au/cdn/shop/files/Kids-3-Wheel-Scooter-22_45232baa-5007-4b99-866e-9ddafd214da5.jpg?v=1773117943&width=1000",
+    "imageSource": "Little Nation",
+    "label": "Самокаты"
   },
   {
-    id: "radix", category: "strength", art: "radix", accent: "butter",
-    title: "Radix Nutrition", eyebrow: "Удобное питание",
-    description: "Завтраки и протеин из моего повседневного рациона. По моей ссылке другу — NZ$20 скидки при заказе свыше NZ$60; мне — 1 500 бонусных баллов (эквивалент NZ$15 на покупки).",
-    url: "https://radixnutrition.com/", referralUrl: "https://i.refs.cc/6cYXtrb3", affiliateUrl: "", imageUrl: "", label: "Перейти со скидкой", referral: true
+    "id": "little-balance",
+    "category": "family",
+    "status": "mine",
+    "title": "Little Nation · беговел",
+    "eyebrow": "Учиться держать равновесие",
+    "description": "Ещё одна наша вещь от Little Nation — беговел. Из тех покупок, которые не лежат ради красоты: на них учатся, падают, пробуют снова и радуются своим возможностям.",
+    "url": "https://littlenation.co.nz/collections/balance-bikes",
+    "imageUrl": "https://littlenation.com.au/cdn/shop/files/Balance-Bike-16_0e5d7d83-1b03-4c5f-8ca5-7b7c9ca36d7e.jpg?v=1762382690&width=1000",
+    "imageSource": "Little Nation",
+    "label": "Беговелы"
   },
   {
-    id: "broth", category: "strength", art: "broth", accent: "peach",
-    title: "Nutra Naturals · Beef Bone Broth", eyebrow: "На моей кухне",
-    description: "Костный бульон — один из продуктов, которые удобно иметь под рукой. По моей ссылке другу — A$20 скидки на первый заказ свыше A$120; мне — A$20 бонусами программы.",
-    url: "https://nutraorganics.com.au/", referralUrl: "https://rwrd.io/ref_WMPWNMH?c", affiliateUrl: "", imageUrl: "", label: "Перейти со скидкой", referral: true
+    "id": "little-push",
+    "category": "family",
+    "status": "mine",
+    "title": "Little Nation · push trike",
+    "eyebrow": "Ещё один способ гулять вместе",
+    "description": "А ещё у дочки есть велосипед, который взрослый может толкать. Такие вещи для меня — не про больше игрушек, а про больше времени на улице вместе.",
+    "url": "https://littlenation.co.nz/collections/trikes-push-bikes",
+    "imageUrl": "https://littlenation.com.au/wp-content/uploads/2018/09/Push-Trike-BLACK-01.jpg",
+    "imageSource": "Little Nation",
+    "label": "Велосипеды с ручкой"
   },
   {
-    id: "weighted-vest", category: "strength", art: "vest", accent: "sand",
-    title: "Жилет-утяжелитель", eyebrow: "Пока присматриваюсь",
-    description: "Собираю идеи для своей физической активности. Это пока поиск подходящей модели, а не рекомендация проверенного мной товара.",
-    url: "https://www.amazon.com.au/s?k=weighted+vest", affiliateUrl: "", imageUrl: "", label: "Смотреть варианты", wishlist: true
+    "id": "edpower",
+    "category": "family",
+    "status": "mine",
+    "title": "EDpower · Полина Мальцева",
+    "eyebrow": "Развитие детей с интересом",
+    "description": "Курсы и клуб Полины Мальцевой — в моей подборке для родителей, которым интересно развитие ребёнка. Мой код для друзей можно указать при оплате.",
+    "url": "https://edpower.ru/partner/?utm_source=referal",
+    "art": "blocks",
+    "promoCode": "sale21312CB2",
+    "benefit": "Персональный промокод для друзей",
+    "referral": true,
+    "label": "Посмотреть курсы"
   },
   {
-    id: "yoto", category: "family", art: "yoto", accent: "butter",
-    title: "Yoto", eyebrow: "Для ребёнка и наших семейных дней",
-    description: "Аудиоистории и музыка для детей: слушать и воображать, а не только смотреть в экран. Личную ссылку «пригласи друга» не публикую здесь из-за правил программы Yoto.",
-    url: "https://au.yotoplay.com/", affiliateUrl: "", imageUrl: "", label: "Узнать о Yoto"
+    "id": "resilience",
+    "category": "joy",
+    "status": "curious",
+    "title": "Resilience Agenda",
+    "eyebrow": "Планирование с заботой о себе",
+    "description": "Мне откликаются ежедневники, в которых есть место не только для задач, но и для собственных потребностей, отдыха и рефлексии. Не ещё один способ всё успевать, а напоминание о себе.",
+    "url": "https://www.resilienceagenda.com/pages/mental-fitness-diary-planner",
+    "imageUrl": "https://resilienceagenda.co.uk/cdn/shop/files/DSCF6913_grey_0f2e0311-a65d-4533-9ab6-0736eaefea42.jpg?v=1758028417&width=1000",
+    "imageSource": "Resilience Agenda",
+    "label": "Дневники и планеры"
   },
   {
-    id: "womens-sreda", category: "strength", art: "diary", accent: "mint",
-    title: "Женская среда · Анна Левадная", eyebrow: "Женское здоровье и знания",
-    description: "Годовой лекторий о женском здоровье с экспертами. Я работаю здесь коучем и веду поддерживающую рубрику. По моему коду подруге — 20% скидки на подписку; мне — 1 000 ₽ бонусами на счёт.",
-    url: "https://event.annamama.ru/womenhealth", referralUrl: "", affiliateUrl: "", imageUrl: "", label: "Посмотреть лекторий",
-    promoCode: "sreda295C31D8", referral: true
+    "id": "creator-friend",
+    "category": "joy",
+    "status": "curious",
+    "title": "Creator’s Friend",
+    "eyebrow": "Блокноты для всех моих интересов",
+    "description": "Обожаю идею: не пытаться втиснуть всю жизнь в один планер, а дать место письму, творчеству, путешествиям, новым увлечениям. Красиво, практично, любопытно.",
+    "url": "https://www.creatorsfriend.com.au/",
+    "imageUrl": "https://www.creatorsfriend.com.au/cdn/shop/files/DSC00448.jpg?crop=center&height=1000&v=1726196319&width=1000",
+    "imageSource": "Creator’s Friend",
+    "label": "Посмотреть блокноты"
   },
   {
-    id: "edpower", category: "family", art: "blocks", accent: "mint",
-    title: "EDpower · Полина Мальцева", eyebrow: "Образование и развитие детей",
-    description: "Курсы и клуб для родителей, которым хочется лучше понимать развитие ребёнка. У меня есть код для друзей — его можно ввести при оплате.",
-    url: "https://edpower.ru/partner/?utm_source=referal", affiliateUrl: "", imageUrl: "", label: "Посмотреть программы",
-    promoCode: "sale21312CB2", referral: true
+    "id": "shakti",
+    "category": "joy",
+    "status": "curious",
+    "title": "Shakti Mat",
+    "eyebrow": "Маленький ритуал для себя",
+    "description": "Коврики Shakti Mat давно в моих находках. Мне близка идея выделять время для себя через простые телесные ритуалы. По моей ссылке другу — $10 скидки на первый заказ, мне — $10 бонуса при покупке.",
+    "url": "https://www.shaktimat.co.nz/",
+    "referralUrl": "https://oken.do/ho4xwfcq",
+    "referral": true,
+    "benefit": "Тебе −$10 на первый заказ",
+    "imageUrl": "https://www.shaktimat.co.nz/cdn/shop/files/shakti-acupressure-mat-black-level-3-front_ecec36ef-bb2b-4a66-bd74-39820be5fe66.jpg?crop=center&height=1000&v=1767578255&width=1000",
+    "imageSource": "Shakti Mat NZ",
+    "label": "Смотреть коврик"
   },
   {
-    id: "mave", category: "create", art: "mic", accent: "lavender",
-    title: "mave.digital", eyebrow: "Мой подкаст",
-    description: "Платформа для публикации подкастов. Инструменты, которые помогают историям находить слушателей.",
-    url: "https://mave.digital/", affiliateUrl: "", imageUrl: "", label: "Открыть mave"
+    "id": "masterclass",
+    "category": "joy",
+    "status": "mine",
+    "title": "MasterClass",
+    "eyebrow": "Учусь просто потому, что интересно",
+    "description": "Один из моих любимых источников знаний ещё до того, как подкасты и обучение у экспертов стали повсюду. Я обожаю возможность заглянуть в мир людей, увлечённых своим делом. Иногда учёба — просто удовольствие.",
+    "url": "https://www.masterclass.com/",
+    "art": "folios",
+    "label": "Открыть MasterClass"
   },
   {
-    id: "fireflies", category: "create", art: "waves", accent: "sand",
-    title: "Fireflies.ai", eyebrow: "Записи и заметки",
-    description: "Расшифровка встреч и сохранение важных мыслей. Моя ссылка даёт новым подходящим пользователям 10% скидки на тариф при подключении в первые 3 дня; мне — $5 кредитами на Fireflies за успешную активацию. По условиям программы для бонуса нужны рабочие email-домены.",
-    url: "https://fireflies.ai/", referralUrl: "https://app.fireflies.ai/login?referralCode=v6PURmw0Gc", affiliateUrl: "", imageUrl: "", label: "Попробовать со скидкой", referral: true
+    "id": "radix",
+    "category": "health",
+    "status": "mine",
+    "title": "Radix Nutrition",
+    "eyebrow": "Завтраки и протеин, которые выручают",
+    "description": "Radix — реальная часть моего питания: быстрые завтраки и протеин, особенно когда день очень плотный. По моей ссылке другу — NZ$20 при заказе свыше NZ$60; мне — 1 500 баллов.",
+    "url": "https://radixnutrition.com/",
+    "referralUrl": "https://i.refs.cc/6cYXtrb3",
+    "referral": true,
+    "benefit": "Тебе −NZ$20 при заказе от NZ$60",
+    "imageUrl": "https://radixnutrition.co.uk/cdn/shop/files/UK_V9_ORI400_BLU.png?v=1699905881&width=1000",
+    "imageSource": "Radix Nutrition",
+    "label": "Посмотреть Radix"
   },
   {
-    id: "chatplace", category: "create", art: "chat", accent: "peach",
-    title: "ChatPlace", eyebrow: "Автоматизация без суеты",
-    description: "Мой инструмент для автоматизации ответов в соцсетях. По ссылке или коду — 10-дневный пробный доступ к Pro/Creator. Я могу получать комиссию от оплат привлечённых пользователей, пока моя подписка активна.",
-    url: "https://chatplace.io/", affiliateUrl: "https://chatplace.io/?r=3b1e9f02-4cb1-4a3f-ba77-4c31e8f4aee0", imageUrl: "", label: "Попробовать ChatPlace",
-    promoCode: "LAJONAXO47", referral: true
+    "id": "nutra",
+    "category": "health",
+    "status": "mine",
+    "title": "Nutra Naturals · Bone Broth",
+    "eyebrow": "Удобная основа для еды",
+    "description": "Beef Bone Broth — ещё одна моя кухонная находка. Мне нравится иметь под рукой бульон для простых блюд. По ссылке другу — A$20 на первый заказ свыше A$120, мне — A$20 бонусами.",
+    "url": "https://nutraorganics.com.au/products/beef-bone-broth-concentrate-natural",
+    "referralUrl": "https://rwrd.io/ref_WMPWNMH?c",
+    "referral": true,
+    "benefit": "Тебе −A$20 на первый заказ от A$120",
+    "imageUrl": "https://assets.healthylife.com.au/product-images/64581.jpg",
+    "imageSource": "Healthylife / Nutra Organics",
+    "label": "Посмотреть бульон"
   },
   {
-    id: "masterclass", category: "create", art: "folios", accent: "peach",
-    title: "MasterClass", eyebrow: "Учиться из любопытства",
-    description: "Один из моих самых любимых источников знаний ещё с тех времён, когда подкасты и привычка постоянно учиться у экспертов не были настолько популярны. Для меня это возможность заглянуть в мир людей, которые увлечены своим делом, и снова почувствовать желание узнавать новое.",
-    url: "https://www.masterclass.com/", affiliateUrl: "", imageUrl: "", label: "Заглянуть в MasterClass"
+    "id": "sreda",
+    "category": "health",
+    "status": "mine",
+    "title": "«Женская среда»",
+    "eyebrow": "Учиться заботиться о женском здоровье",
+    "description": "Лекторий Анны Левадной, где я сама работаю коучем и веду рубрику «С Машей о важном». По моему промокоду подруге — 20% скидки, мне — 1 000 ₽ бонусами.",
+    "url": "https://event.annamama.ru/womenhealth",
+    "art": "diary",
+    "promoCode": "sreda295C31D8",
+    "benefit": "Тебе −20% на подписку",
+    "referral": true,
+    "label": "Открыть лекторий"
   },
   {
-    id: "notion", category: "create", art: "folios", accent: "sand",
-    title: "Notion", eyebrow: "Организация и творчество",
-    description: "Пространство, где можно собирать идеи, проекты и заметки. Сейчас Notion не принимает новых участников в affiliate-программу, поэтому ссылка обычная.",
-    url: "https://www.notion.com/", affiliateUrl: "", imageUrl: "", label: "Посмотреть Notion"
+    "id": "conqueror",
+    "category": "health",
+    "status": "trying",
+    "title": "The Conqueror · 5K Training",
+    "eyebrow": "Мой подарок к 38-летию",
+    "description": "Я люблю ходить пешком, а вот бегать мне сложно. Поэтому хочу подарить себе приключение — научиться пробегать 5 км и получить медаль не за скорость, а за свой путь. Без давления, в своём темпе.",
+    "url": "https://www.theconqueror.events/challenge/original/single/5ktrainingchallenge",
+    "imageUrl": "https://checkoutapi.theconqueror.events/uploads/products/1929/medal_image/5K-checkout-product.webp?cachebuster=1779890055",
+    "imageSource": "The Conqueror",
+    "label": "Посмотреть челлендж"
   },
   {
-    id: "taplink", category: "create", art: "links", accent: "mint",
-    title: "Taplink", eyebrow: "Ссылки и страницы",
-    description: "Место, в котором можно собрать предложения, материалы и способы связи, не превращая профиль в лабиринт.",
-    url: "https://taplink.ru/", affiliateUrl: "", imageUrl: "", label: "Открыть Taplink"
+    "id": "weighted",
+    "category": "health",
+    "status": "wish",
+    "title": "Жилет-утяжелитель",
+    "eyebrow": "Хочу подобрать для тренировок",
+    "description": "Пока изучаю варианты, а не советую конкретную модель. Хочется удобный жилет с регулируемым весом; когда выберу свой, заменю здесь ссылку на точную модель.",
+    "url": "https://www.amazon.com.au/s?k=weighted+vest",
+    "art": "vest",
+    "label": "Посмотреть варианты",
+    "imageUrl": "https://m.media-amazon.com/images/I/71Po3XHc1EL.jpg",
+    "imageSource": "Amazon product listing — пример, модель не выбрана"
   },
   {
-    id: "prodamus", category: "create", art: "payment", accent: "lavender",
-    title: "Prodamus", eyebrow: "Платежи для своих проектов",
-    description: "Сервис приёма оплат, которым я пользуюсь в работе. Особенно актуален авторам и экспертам с русскоязычными клиентами.",
-    url: "https://prodamus.ru/", affiliateUrl: "", imageUrl: "", label: "Открыть Prodamus"
+    "id": "fireflies",
+    "category": "work",
+    "status": "mine",
+    "title": "Fireflies.ai",
+    "eyebrow": "Не держать всё в голове",
+    "description": "Помогает сохранять и разбирать важные рабочие разговоры. Новым подходящим пользователям по ссылке — 10% скидки; мне — $5 кредитами при выполнении условий программы.",
+    "url": "https://fireflies.ai/",
+    "referralUrl": "https://app.fireflies.ai/login?referralCode=v6PURmw0Gc",
+    "referral": true,
+    "benefit": "Тебе −10% на планы",
+    "art": "waves",
+    "label": "Попробовать Fireflies"
+  },
+  {
+    "id": "chatplace",
+    "category": "work",
+    "status": "mine",
+    "title": "ChatPlace",
+    "eyebrow": "Поменьше ручной рутины",
+    "description": "Инструмент, который я использую для работы с сообщениями и автоматизацией в соцсетях. По ссылке или промокоду — 10 дней Pro/Creator на пробу; я могу получать комиссию.",
+    "url": "https://chatplace.io/",
+    "affiliateUrl": "https://chatplace.io/?r=3b1e9f02-4cb1-4a3f-ba77-4c31e8f4aee0",
+    "promoCode": "LAJONAXO47",
+    "benefit": "Тебе 10 дней пробного Pro/Creator",
+    "art": "chat",
+    "label": "Попробовать ChatPlace"
+  },
+  {
+    "id": "mave",
+    "category": "work",
+    "status": "mine",
+    "title": "mave.digital",
+    "eyebrow": "Дом моего подкаста",
+    "description": "Место, где живёт мой подкаст «Сила рефлексии». Люблю инструменты, которые позволяют творить и делиться историями, а не увязать в технических мелочах.",
+    "url": "https://mave.digital/",
+    "art": "mic",
+    "label": "Открыть mave"
+  },
+  {
+    "id": "notion",
+    "category": "work",
+    "status": "mine",
+    "title": "Notion",
+    "eyebrow": "Собирать идеи в одном месте",
+    "description": "Место для заметок, планов и проектов. Я люблю системы, которые помогают не потерять мысли, хотя иногда самая хорошая система — просто закрыть ноутбук.",
+    "url": "https://www.notion.com/",
+    "art": "folios",
+    "label": "Посмотреть Notion"
+  },
+  {
+    "id": "taplink",
+    "category": "work",
+    "status": "mine",
+    "title": "Taplink",
+    "eyebrow": "Ссылки, продукты и всё важное рядом",
+    "description": "Использую как удобную точку входа: материалы, предложения, запись и нужные ссылки в одном месте. Без собственного интернет-магазина на старте.",
+    "url": "https://taplink.ru/",
+    "art": "links",
+    "label": "Посмотреть Taplink"
+  },
+  {
+    "id": "prodamus",
+    "category": "work",
+    "status": "mine",
+    "title": "Prodamus",
+    "eyebrow": "Приём оплаты без лишней сложности",
+    "description": "Один из сервисов, через который я принимаю оплату за работу и продукты для русскоязычных клиенток. Практическая находка для тех, кто тоже работает на себя.",
+    "url": "https://prodamus.ru/",
+    "art": "payment",
+    "label": "Посмотреть Prodamus"
+  },
+  {
+    "id": "telescope",
+    "category": "dreams",
+    "status": "wish",
+    "title": "Большой телескоп",
+    "eyebrow": "Смотреть на звёзды своими глазами",
+    "description": "Мечтаю о большом красивом телескопе, чтобы ночью выходить под небо Новой Зеландии, рассматривать Луну и кольца Сатурна и однажды показывать их дочке. Sky-Watcher 200P — пока только пример.",
+    "url": "https://www.jacobsdigital.co.nz/products/skywatcher-8-dobsonian-reflector-telescope",
+    "imageUrl": "https://www.highpointscientific.com/media/catalog/product/cache/18e5d78c77d765855b8dd1df16fe9ab3/s/k/sky-s11610-left-front.jpg",
+    "imageSource": "High Point Scientific / Sky-Watcher",
+    "label": "Посмотреть пример"
+  },
+  {
+    "id": "doterra",
+    "category": "dreams",
+    "status": "wish",
+    "title": "doTERRA · Emotional Touch",
+    "eyebrow": "Масла, связанные с настроениями",
+    "description": "Меня интригует идея ароматов для разных эмоциональных состояний — не как лечение, а как часть личных ритуалов. Хочу попробовать набор роллеров, а заодно лучше исследовать мир запахов.",
+    "url": "https://www.nourishedandvibrant.co.nz/low-tox-living-shop/p/emotional-aromatherapy-touch-kit-b2ge3",
+    "imageUrl": "https://www.wildlotusoils.com.au/cdn/shop/products/emotional-aromatherapy-touch.jpg?v=1608256400",
+    "imageSource": "Wild Lotus Oils / doTERRA",
+    "label": "Посмотреть набор"
+  },
+  {
+    "id": "rollers",
+    "category": "dreams",
+    "status": "wish",
+    "title": "Аромароллеры",
+    "eyebrow": "Аромат, который всегда с собой",
+    "description": "Хочу найти приятные смеси в формате роллера — нанёс на запястье и сделал маленькую остановку посреди дня. Пока выбираю бренд и аромат, это не проверенная рекомендация.",
+    "url": "https://www.sevenscents.co.nz/collections/essential-oil-roller-blends",
+    "art": "broth",
+    "label": "Посмотреть роллеры"
   }
 ];
 window.MASHA_BOOK_URL = "https://architripture.github.io/architect-emotions-book/";
