@@ -73,6 +73,12 @@ window.MASHA_PICKS = [
     promoCode: "LAJONAXO47", referral: true
   },
   {
+    id: "masterclass", category: "create", art: "folios", accent: "peach",
+    title: "MasterClass", eyebrow: "Учиться из любопытства",
+    description: "Один из моих самых любимых источников знаний ещё с тех времён, когда подкасты и привычка постоянно учиться у экспертов не были настолько популярны. Для меня это возможность заглянуть в мир людей, которые увлечены своим делом, и снова почувствовать желание узнавать новое.",
+    url: "https://www.masterclass.com/", affiliateUrl: "", imageUrl: "", label: "Заглянуть в MasterClass"
+  },
+  {
     id: "notion", category: "create", art: "folios", accent: "sand",
     title: "Notion", eyebrow: "Организация и творчество",
     description: "Пространство, где можно собирать идеи, проекты и заметки. Сейчас Notion не принимает новых участников в affiliate-программу, поэтому ссылка обычная.",
