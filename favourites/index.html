@@ -35,14 +35,15 @@
  <p>Не всё хорошее в жизни нужно покупать. Но есть вещи и инструменты, которые действительно радуют, вдохновляют и освобождают время. Я делюсь ими так, как поделилась бы с подругой за чашкой чая.</p>
 </section>
 <section class="finds section-pad" id="finds">
- <div class="finds-head"><div><p class="section-overline">МНЕ НРАВИТСЯ · ПОЛЬЗУЮСЬ · МЕЧТАЮ</p><h2>Мои маленькие <em>находки</em></h2></div><p>Выбирай раздел или смотри всё подряд — без необходимости покупать что-либо.</p></div>
+ <div class="finds-head"><div><p class="section-overline">МНЕ НРАВИТСЯ · ПОЛЬЗУЮСЬ · МЕЧТАЮ</p><h2>Мои <em>находки</em></h2></div><p>Выбирай раздел или смотри всё подряд — без необходимости покупать что-либо.</p></div>
  <div class="filters" role="group" aria-label="Категории находок">
   <button class="filter active" data-filter="all" aria-pressed="true">Все <span id="total">23</span></button>
-  <button class="filter" data-filter="family" aria-pressed="false">Для ребёнка</button>
-  <button class="filter" data-filter="joy" aria-pressed="false">Для себя и кайфа</button>
+  <button class="filter" data-filter="joy" aria-pressed="false">Для себя и удовольствия</button>
+  <button class="filter" data-filter="work" aria-pressed="false">Рабочие инструменты</button>
+  <button class="filter" data-filter="simple" aria-pressed="false">Чтобы жить проще</button>
   <button class="filter" data-filter="health" aria-pressed="false">Здоровье и сила</button>
-  <button class="filter" data-filter="work" aria-pressed="false">Работа и творчество</button>
-  <button class="filter" data-filter="dreams" aria-pressed="false">Мечталки</button>
+  <button class="filter" data-filter="family" aria-pressed="false">Для ребёнка</button>
+  <button class="filter" data-filter="dreams" aria-pressed="false">Мои мечты</button>
  </div>
  <div class="status-filters" role="group" aria-label="Статус находки">
   <span>Показать:</span>
@@ -55,13 +56,36 @@
  </div>
  <div id="cards" class="cards" aria-live="polite"></div>
 </section>
-<section class="book-section section-pad">
- <div class="book-visual"><img class="book-cover-photo" src="../assets/book.jpg" alt="Книга Маши Херд «Архитектор эмоций»" loading="lazy"></div>
- <div class="book-copy"><p class="section-overline">МОЯ СОБСТВЕННАЯ КНИГА</p><h2>Книга, которую <em>я написала сама.</em></h2><p>«Архитектор эмоций» — моя книга из собственных историй. Про чувства, ошибки, принятие себя и право владеть своим прошлым. Одна из больших мечт, которая уже стала реальностью.</p><a class="cta dark" id="book-link" href="https://architripture.github.io/architect-emotions-book/" target="_blank" rel="noopener noreferrer">Познакомиться с книгой ↗</a></div>
-</section>
+<template id="creator-template">
+ <article class="creator-panel">
+  <div class="creator-visual"><img src="../assets/book.jpg" alt="Книга «Архитектор эмоций»" loading="lazy"></div>
+  <div class="creator-copy">
+   <p class="section-overline">А ЕЩЁ Я СОЗДАЮ СВОЁ</p>
+   <h2>Истории, в которых <em>можно узнать себя.</em></h2>
+   <p>Я написала «Архитектор эмоций» из собственных историй — о чувствах, ошибках и праве быть собой. Книга уже существует, и теперь я учусь делиться ею с миром.</p>
+   <a class="cta dark" id="book-link" href="https://architripture.github.io/architect-emotions-book/" target="_blank" rel="noopener noreferrer">Познакомиться с книгой ↗</a>
+   <div class="creator-coaching">
+    <h3>А ещё я работаю с женщинами</h3>
+    <p>Помогаю перестать жить в ущерб себе, замечать собственные потребности и делать выбор в свою пользу.</p>
+    <a href="https://architripture.github.io/perimenopause/personal/" target="_blank" rel="noopener noreferrer">Узнать о личной работе со мной ↗</a>
+   </div>
+  </div>
+ </article>
+</template>
 <section class="wishlist section-pad"><div class="wishlist-icon">✧</div><p class="section-overline">НЕ ВСЕ МЕЧТЫ МОЖНО КУПИТЬ</p><h2>Больше гулять.<br><em>Больше жить.</em></h2><p>Больше неспешных прогулок, фильмов, лекций из любопытства, творчества без дедлайнов и времени с семьёй. Самые желанные вещи для меня часто вообще нельзя положить в корзину — это свобода распоряжаться своей жизнью.</p></section>
+<section class="support-section section-pad" id="support">
+ <div class="support-ornament" aria-hidden="true">✳</div>
+ <p class="section-overline">МАЛЕНЬКОЕ СПАСИБО АВТОРУ</p>
+ <h2>Угостить меня <em>кофе?</em></h2>
+ <p class="support-lead">Если тебе близки мои истории, подкаст или находки, ты можешь поддержать моё творчество. Совершенно добровольно — читать и делиться тоже замечательно.</p>
+ <div class="support-options">
+  <div class="support-option"><span class="support-icon">₽</span><div><strong>Поддержать в рублях</strong><p>CloudTips · российские карты</p></div><span id="cloudtips-action" class="support-soon">Ссылка появится позже</span></div>
+  <div class="support-option"><span class="support-icon">$</span><div><strong>Поддержать в NZD</strong><p>Stripe · международные карты</p></div><span id="stripe-action" class="support-soon">Ссылка появится позже</span></div>
+ </div>
+ <p class="support-footnote">Пока платёжные ссылки не подключены. Здесь не нужно ничего оплачивать — это только будущая возможность сказать спасибо.</p>
+</section>
 <section class="disclosure section-pad"><h2>Немного о ссылках и бонусах</h2>
- <p>Здесь есть обычные ссылки, а есть мои персональные реферальные ссылки и промокоды. Если ты воспользуешься ими, я могу получить баллы, кредиты сервиса, бонус на покупки или денежную комиссию — это отмечено на карточках. Участие в программах не делает мои рекомендации универсальными для всех.</p>
+ <p>На этой странице есть обычные ссылки, а также мои персональные реферальные ссылки и промокоды. Если ты воспользуешься ими, я могу получить баллы, кредиты сервиса, бонус на покупки или денежную комиссию — это отмечено на карточках. Участие в программах не делает мои рекомендации универсальными для всех.</p>
  <p>Скидки и условия программ могут меняться и зависеть от страны. Перед покупкой проверь итоговую сумму и правила. Фотографии товаров принадлежат указанным брендам и магазинам и служат для иллюстрации находок; со временем я хочу заменить их своими.</p>
  <p><strong>Покупай только то, что нужно тебе.</strong> Я гораздо больше хочу, чтобы у тебя было больше хорошей жизни, а не больше вещей.</p></section>
 </main>
