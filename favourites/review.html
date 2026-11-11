@@ -76,13 +76,15 @@ h3{font-size:17px;margin:0}
 <span>05 · Для ребёнка и времени вместе</span><span>06 · Мои мечты</span>
 </div>
 <div id="sections"></div>
-<section class="section">
+<template id="creator-review-template"><section class="section">
  <div class="section-head"><p class="sub">СВОЁ · ПОСЛЕ РАБОЧИХ ИНСТРУМЕНТОВ</p><h2>Моя книга и личная работа</h2></div>
  <div class="offer"><h3>«Архитектор эмоций»</h3><p>Я написала её из собственных историй — о чувствах, ошибках и праве быть собой. Книга уже существует, и теперь я учусь делиться ею с миром.</p>
  <p><b>Кнопка:</b> «Познакомиться с книгой» · https://architripture.github.io/architect-emotions-book/</p>
  <h3>Личная работа со мной</h3><p>Помогаю женщинам перестать жить в ущерб себе, замечать собственные потребности и делать выбор в свою пользу.</p>
  <p><b>Кнопка:</b> «Узнать о личной работе» · https://architripture.github.io/perimenopause/personal/</p>
  <div class="edit">□ Оставить · □ Переписать · □ Фото · □ Ссылка</div><div class="notes"></div></div>
+ </section></template>
+<section class="section">
  <div class="section-head"><p class="sub">НЕ ВСЕ МЕЧТЫ МАТЕРИАЛЬНЫЕ</p><h2>Больше гулять. <em>Больше жить.</em></h2></div>
  <p>Больше неспешных прогулок, фильмов, лекций из любопытства, творчества без дедлайнов и времени с семьёй. Самое желанное — свобода распоряжаться своим временем.</p>
  <div class="notes"></div>
@@ -115,6 +117,10 @@ document.addEventListener("DOMContentLoaded",()=>{
   section.className="section";
   section.innerHTML='<div class="section-head"><p class="sub">'+String(order.indexOf(cat)+1).padStart(2,"0")+' · '+arr.length+' НАХОДКИ</p><h2>'+names[cat]+'</h2><p>'+desc[cat]+'</p></div><div class="cards">'+cards(arr)+'</div>';
   root.appendChild(section);
+  if(cat==="work"){
+    const tpl=document.getElementById("creator-review-template");
+    if(tpl) root.appendChild(tpl.content.cloneNode(true));
+  }
  }
 });
 </script>
