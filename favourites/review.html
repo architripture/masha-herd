@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Машины находки · печатный макет</title>
+<meta name="robots" content="noindex">
+<script defer src="./data.js"></script>
+<style>
+:root{--ink:#234c4d;--plum:#87485b;--sage:#e1eee7;--cream:#faf6ee;--sand:#efe6d9;--line:#c6d6d2}
+*{box-sizing:border-box}
+body{margin:0;background:#eee;color:var(--ink);font:14px/1.5 Arial,sans-serif}
+.sheet{width:min(100%,210mm);margin:20px auto;background:white;padding:16mm 15mm;box-shadow:0 8px 30px #0001}
+h1,h2,h3{font-family:Georgia,serif;font-weight:normal;line-height:1.18}
+h1{font-size:38px;letter-spacing:-1px;margin:7px 0 15px}
+h1 em,h2 em{color:var(--plum)}
+h2{font-size:26px;margin:6px 0 8px}
+h3{font-size:17px;margin:0}
+.sub{font-weight:700;letter-spacing:2px;font-size:10px;text-transform:uppercase;color:var(--plum)}
+.lead{max-width:600px;font-size:14px;color:#49615e}
+.toplinks{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:16px}
+.toplinks a,.toplinks button{border:1px solid #c0cfc8;background:#fff;border-radius:22px;padding:8px 15px;color:var(--ink);font-weight:bold;cursor:pointer}
+.intro{padding:15px;border-left:4px solid #edc76e;background:#faf7f0;margin:23px 0}
+.index{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:15px 0}
+.index span{display:block;padding:9px 12px;border:1px solid var(--line);border-radius:8px;font-size:12px}
+.section{margin:35px 0 26px}
+.section-head{padding-top:8px;border-top:4px solid var(--ink);margin-bottom:14px}
+.section-head h2{margin-bottom:5px}
+.section-head p{font-size:12px;color:#5d736f}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.card{border:1px solid #c7d7d1;border-radius:9px;overflow:hidden;break-inside:avoid;page-break-inside:avoid;display:flex;flex-direction:column;min-height:224px}
+.card-head{background:var(--cream);display:flex;align-items:center;gap:11px;padding:11px;border-bottom:1px solid #e2ded7;min-height:75px}
+.thumb{width:65px;height:57px;background:#dcece4;border-radius:6px;flex:none;display:grid;place-items:center;color:#668b80;font-size:19px;overflow:hidden}
+.thumb img{width:100%;height:100%;object-fit:contain;background:white}
+.card-title{font:17px/1.12 Georgia,serif;margin:0 0 3px}
+.eyebrow{font-size:10px;color:#746b60;line-height:1.4}
+.card-content{padding:11px 12px 12px;display:flex;flex-direction:column;gap:6px;flex:1}
+.status{font-size:10px;font-weight:bold;color:var(--plum)}
+.desc{font-size:11px;line-height:1.48;margin:0;color:#334947}
+.benefit{font-size:10.5px;background:var(--sage);color:#255d4e;padding:6px 7px;border-radius:5px}
+.url{font-size:9px;color:#627b75;overflow-wrap:anywhere}
+.edit{margin-top:auto;border-top:1px dashed #b9c9c2;padding-top:9px;font-size:10px;letter-spacing:.1px}
+.notes{height:26px;border-bottom:1px dotted #bdc8c1;margin-top:4px}
+.offer{padding:18px 20px;border:1px solid #dbd0c8;background:#f0e7df;border-radius:10px;break-inside:avoid;margin:14px 0}
+.offer p{font-size:12px}
+.offer a{color:var(--ink)}
+.support-options{display:flex;gap:12px}
+.support-options>div{flex:1;background:#fff;padding:12px;border:1px solid #cbd8d1;border-radius:6px}
+.field{border-bottom:1px solid #bdc9c2;height:25px}
+.footer-note{font-size:11px;color:#63736f;margin-top:14px}
+@page{size:A4 portrait;margin:12mm}
+@media print{
+ body{background:white}
+ .sheet{width:auto;max-width:none;margin:0;padding:0;box-shadow:none}
+ .toplinks{display:none}
+ .cards{gap:10px}
+ .card{min-height:213px}
+ .section{break-before:page;margin-top:0}
+ .section:first-of-type{break-before:auto}
+ .index span,.intro,.card-head,.benefit,.offer{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ a{text-decoration:none}
+}
+@media(max-width:630px){.sheet{padding:24px 18px}.cards,.index{grid-template-columns:1fr}.card{min-height:0}.support-options{flex-direction:column}}
+</style>
+</head>
+<body>
+<main class="sheet">
+<p class="sub">MASHA HERD · РЕДАКТОРСКИЙ МАКЕТ</p>
+<h1>Машины находки<br><em>К 38-летию</em></h1>
+<p class="lead">Печатная версия будущего сайта: все категории, личные тексты, продукты, бонусы и места для заметок. Это рабочий макет для правок, а не документ для подписчиц.</p>
+<div class="toplinks"><a href="./">Открыть сайт</a><button onclick="window.print()">Распечатать A4 / сохранить в PDF</button></div>
+<div class="intro"><strong>Что проверять:</strong> звучит ли это как я? Правильно ли указан личный опыт? Достаточно ли конкретная вещь на фото? Точны ли скидка, ссылка и статус? Отмечай галочками, дописывай прямо на бумаге.</div>
+<div class="index">
+<span>01 · Для себя и удовольствия</span><span>02 · Рабочие инструменты</span>
+<span>03 · Чтобы жить проще</span><span>04 · Здоровье и сила</span>
+<span>05 · Для ребёнка и времени вместе</span><span>06 · Мои мечты</span>
+</div>
+<div id="sections"></div>
+<section class="section">
+ <div class="section-head"><p class="sub">СВОЁ · ПОСЛЕ РАБОЧИХ ИНСТРУМЕНТОВ</p><h2>Моя книга и личная работа</h2></div>
+ <div class="offer"><h3>«Архитектор эмоций»</h3><p>Я написала её из собственных историй — о чувствах, ошибках и праве быть собой. Книга уже существует, и теперь я учусь делиться ею с миром.</p>
+ <p><b>Кнопка:</b> «Познакомиться с книгой» · https://architripture.github.io/architect-emotions-book/</p>
+ <h3>Личная работа со мной</h3><p>Помогаю женщинам перестать жить в ущерб себе, замечать собственные потребности и делать выбор в свою пользу.</p>
+ <p><b>Кнопка:</b> «Узнать о личной работе» · https://architripture.github.io/perimenopause/personal/</p>
+ <div class="edit">□ Оставить · □ Переписать · □ Фото · □ Ссылка</div><div class="notes"></div></div>
+ <div class="section-head"><p class="sub">НЕ ВСЕ МЕЧТЫ МАТЕРИАЛЬНЫЕ</p><h2>Больше гулять. <em>Больше жить.</em></h2></div>
+ <p>Больше неспешных прогулок, фильмов, лекций из любопытства, творчества без дедлайнов и времени с семьёй. Самое желанное — свобода распоряжаться своим временем.</p>
+ <div class="notes"></div>
+ <div class="section-head"><p class="sub">ДОБРОВОЛЬНАЯ ПОДДЕРЖКА</p><h2>Угостить Машу кофе?</h2></div>
+ <p>Если мои истории, подкаст или находки оказались тебе близки, можно поддержать моё творчество. Поддержка необязательна.</p>
+ <div class="support-options">
+ <div><b>CloudTips · в рублях</b><p>Ссылка пока не добавлена.</p><div class="field"></div></div>
+ <div><b>Stripe · в NZD</b><p>Ссылка пока не добавлена.</p><div class="field"></div></div>
+ </div>
+ <p class="footer-note"><strong>Важно:</strong> реферальные ссылки нужно маркировать; Yoto — только обычная ссылка. Перед запуском проверить права на изображения с сайтов брендов и корректность скидок.</p>
+</section>
+</main>
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+ const data=window.MASHA_PICKS||[];
+ const order=["joy","work","simple","health","family","dreams"];
+ const names={joy:"Для себя и удовольствия",work:"Рабочие инструменты",simple:"Чтобы жить проще",health:"Здоровье и сила",family:"Для ребёнка и времени вместе",dreams:"Мои мечты"};
+ const desc={joy:"То, что приносит радость и вдохновение.",work:"Инструменты моего творчества и бизнеса.",simple:"Что снимает часть рутины.",health:"Движение, питание и забота о теле.",family:"То, что мы любим с дочкой.",dreams:"Пока мечтаю и присматриваюсь."};
+ const statuses={mine:"Пользуюсь / люблю",curious:"Присматриваюсь",trying:"Пробую",wish:"Мечтаю"};
+ const esc=s=>String(s||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+ const cards=arr=>arr.map(p=>{
+  const url=p.affiliateUrl||p.referralUrl||p.url;
+  const photo=p.imageUrl?'<img src="'+esc(p.imageUrl)+'" alt="'+esc(p.title)+'" onerror="this.style.display=\'none\'">':'<span aria-hidden="true">✳</span>';
+  return '<article class="card"><div class="card-head"><div class="thumb">'+photo+'</div><div><h3 class="card-title">'+esc(p.title)+'</h3><div class="eyebrow">'+esc(p.eyebrow)+'</div></div></div><div class="card-content"><div class="status">'+esc(statuses[p.status]||"")+'</div><p class="desc">'+esc(p.description)+'</p>'+(p.benefit?'<div class="benefit">'+esc(p.benefit)+'</div>':'')+(p.promoCode?'<div class="benefit">Промокод: '+esc(p.promoCode)+'</div>':'')+'<div class="url">'+esc(url)+'</div><div class="edit">□ Оставить · □ Переписать · □ Фото · □ Ссылка</div><div class="notes"></div></div></article>';
+ }).join("");
+ const root=document.getElementById("sections");
+ for(const cat of order){
+  const arr=data.filter(x=>x.category===cat);
+  const section=document.createElement("section");
+  section.className="section";
+  section.innerHTML='<div class="section-head"><p class="sub">'+String(order.indexOf(cat)+1).padStart(2,"0")+' · '+arr.length+' НАХОДКИ</p><h2>'+names[cat]+'</h2><p>'+desc[cat]+'</p></div><div class="cards">'+cards(arr)+'</div>';
+  root.appendChild(section);
+ }
+});
+</script>
+</body>
+</html>
