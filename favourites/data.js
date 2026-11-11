@@ -117,7 +117,7 @@ window.MASHA_PICKS = [
   },
   {
     "id": "radix",
-    "category": "health",
+    "category": "simple",
     "status": "mine",
     "title": "Radix Nutrition",
     "eyebrow": "Завтраки и протеин, которые выручают",
@@ -132,7 +132,7 @@ window.MASHA_PICKS = [
   },
   {
     "id": "nutra",
-    "category": "health",
+    "category": "simple",
     "status": "mine",
     "title": "Nutra Naturals · Bone Broth",
     "eyebrow": "Удобная основа для еды",
@@ -293,3 +293,6 @@ window.MASHA_PICKS = [
   }
 ];
 window.MASHA_BOOK_URL = "https://architripture.github.io/architect-emotions-book/";
+
+// Вставить ссылки только после создания и проверки платежей.
+window.MASHA_SUPPORT = { stripeUrl: "", cloudtipsUrl: "" };
