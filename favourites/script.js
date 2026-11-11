@@ -1,5 +1,6 @@
 (() => {
  const data = window.MASHA_PICKS || [];
+ const order = ["joy","work","simple","health","family","dreams"];
  const root = document.getElementById("cards");
  document.getElementById("total").textContent = data.length;
  const arts = {
@@ -36,17 +37,23 @@
    return '<article class="product" data-category="'+escape(item.category)+'" data-status="'+escape(item.status)+'"><div class="product-cover'+photoClass+'">'+badge+img+credit+'</div><div class="product-body"><div class="status-row"><span class="status-pill status-'+escape(item.status)+'">'+escape(statusNames[item.status] || "Находка")+'</span></div><div class="product-eyebrow">'+escape(item.eyebrow)+'</div><h3>'+escape(item.title)+'</h3><p class="product-desc">'+escape(item.description)+'</p>'+benefit+promo+'<a class="product-link" target="_blank" rel="noopener noreferrer'+(linked ? " sponsored" : "")+'" href="'+escape(url)+'">'+escape(item.label || "Перейти на сайт")+' <span aria-hidden="true">↗</span></a>'+referralNote+'</div></article>';
  }
  function render() {
-   const items = data.filter(i => (categoryFilter==="all" || i.category===categoryFilter) && (statusFilter==="all" || i.status===statusFilter));
-   const names = {family:"Для ребёнка",joy:"Для себя и удовольствия",health:"Для здоровья и силы",work:"Для работы и творчества",dreams:"Мои мечталки"};
-   const descriptions = {family:"Вещи для движения, воображения и совместных открытий.",joy:"Красивые ритуалы, знания и маленькие удовольствия.",health:"Не ради идеальности, а чтобы чувствовать себя сильнее.",work:"Сервисы, которые помогают создавать и не теряться в задачах.",dreams:"То, что пока на горизонте — и это тоже часть жизни."};
+   const items = data.filter(i => (categoryFilter==="all" || i.category===categoryFilter) && (statusFilter==="all" || i.status===statusFilter)).slice().sort((a,b)=>order.indexOf(a.category)-order.indexOf(b.category));
+   const names = {joy:"Для себя и удовольствия",work:"Для работы и творчества",simple:"Чтобы жить проще",health:"Для здоровья и силы",family:"Для ребёнка и времени вместе",dreams:"Мои мечты"};
+   const descriptions = {joy:"Красивые ритуалы, знания и маленькие удовольствия.",work:"Сервисы, которые помогают творить и не увязать в рутине.",simple:"Находки, которые экономят время и помогают кормить семью.",health:"Движение, восстановление, знания о теле — без гонки за идеальностью.",family:"Вещи для движения, воображения и совместных открытий.",dreams:"То, что пока на горизонте, и это тоже часть жизни."};
    const groupedCards = [];
    let last = null;
-   for(const item of items){
+   for(let idx=0; idx<items.length; idx++){
+      const item=items[idx];
       if(categoryFilter==="all" && item.category!==last){
         groupedCards.push('<div class="category-heading"><div><span class="category-kicker">МОИ НАХОДКИ</span><h3>'+escape(names[item.category] || item.category)+'</h3><p>'+escape(descriptions[item.category] || "")+'</p></div><span aria-hidden="true">✳</span></div>');
         last=item.category;
       }
       groupedCards.push(card(item));
+      const next = items[idx+1];
+      if(item.category==="work" && (!next || next.category!=="work") && (categoryFilter==="all" || categoryFilter==="work")){
+         const tpl=document.getElementById("creator-template");
+         if(tpl) groupedCards.push(tpl.innerHTML);
+      }
    }
    root.innerHTML = groupedCards.length ? groupedCards.join("") : '<p class="no-results">В этой категории пока ничего нет. Можно посмотреть другие находки.</p>';
    root.querySelectorAll("img.real-photo").forEach(img => img.addEventListener("error", () => {
@@ -69,6 +76,19 @@
    try {await navigator.clipboard.writeText(btn.dataset.copy);btn.textContent="Скопировано ✓";setTimeout(()=>btn.textContent="Скопировать",2400);}
    catch {window.prompt("Скопируй промокод",btn.dataset.copy);}
  });
+ const support = window.MASHA_SUPPORT || {};
+ const supportActions = [
+   ["cloudtips-action", support.cloudtipsUrl, "Перейти в CloudTips ↗"],
+   ["stripe-action", support.stripeUrl, "Поддержать через Stripe ↗"]
+ ];
+ for (const [id,url,label] of supportActions){
+   const node = document.getElementById(id);
+   if(!node || !url || valid(url)==="#") continue;
+   const a=document.createElement("a");
+   a.href=valid(url);a.target="_blank";a.rel="noopener noreferrer";
+   a.className="support-action";a.textContent=label;
+   node.replaceWith(a);
+ }
  const bookLink = document.getElementById("book-link"); if(bookLink) bookLink.href=valid(window.MASHA_BOOK_URL || "https://architripture.github.io/architect-emotions-book/");
  render();
 })();
